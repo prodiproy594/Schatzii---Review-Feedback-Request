@@ -24,16 +24,14 @@
     @media only screen and (max-width: 620px) {
       .main-container { width: 100% !important; max-width: 100% !important; }
       .mobile-pad { padding-left: 20px !important; padding-right: 20px !important; }
-      .hero-title { font-size: 24px !important; line-height: 31px !important; }
+      .hero-title { font-size: 28px !important; line-height: 34px !important; }
     }
   </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f4f4f4;">
-
   <div style="display: none; font-size: 1px; color: #f4f4f4; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-    Your feedback guides our craft. How is your new gear fitting into your everyday setup?
+    Let us know how your gear is performing! Rate your overall experience and share your thoughts.
   </div>
-
   <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4;">
     <tr>
       <td align="center" style="padding: 25px 12px 40px 12px;">
@@ -43,11 +41,11 @@
         <![endif]-->
         <table role="presentation" class="main-container" width="100%" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #ffffff; border: 1px solid #e2e2e2;">
           
-          <!-- Top Utility Banner -->
+          <!-- Top Utility Banner (+ instead of &) -->
           <tr>
             <td align="center" style="background-color: #111111; padding: 9px 15px;">
               <span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #dcdcdc; font-weight: 500;">
-                San Francisco &bull; Intelligent Function & Smart Design
+                San Francisco &bull; Intelligent Function + Smart Design
               </span>
             </td>
           </tr>
@@ -71,7 +69,7 @@
                   </td>
                   <td style="color: #cccccc; font-size: 11px;">&bull;</td>
                   <td style="padding: 0 14px;">
-                    <a href="https://schatzii.com/collections/accessories" target="_blank" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #555555; font-weight: 600;">Audio & Power</a>
+                    <a href="https://schatzii.com/collections/accessories" target="_blank" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #555555; font-weight: 600;">Audio &amp; Power</a>
                   </td>
                   <td style="color: #cccccc; font-size: 11px;">&bull;</td>
                   <td style="padding: 0 14px;">
@@ -84,13 +82,13 @@
 
           <!-- Editorial Intro -->
           <tr>
-            <td align="center" class="mobile-pad" style="padding: 28px 35px 14px 35px;">
-              <span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #888888; font-weight: 700;">Customer Voice</span>
-              <h1 class="hero-title" style="margin: 8px 0 10px 0; font-family: 'Georgia', serif; font-size: 26px; line-height: 33px; color: #111111; font-weight: 400;">
-                How is your gear performing?
+            <td align="center" class="mobile-pad" style="padding: 32px 35px 16px 35px;">
+              <span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #888888; font-weight: 700;">Let Us Know</span>
+              <h1 class="hero-title" style="margin: 8px 0 12px 0; font-family: 'Georgia', serif; font-size: 32px; line-height: 38px; color: #111111; font-weight: 700; letter-spacing: -0.5px;">
+                How your gear is performing.
               </h1>
-              <p style="margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 14px; line-height: 23px; color: #555555; max-width: 480px;">
-                You have had some time to put your Schatzii essentials to work. Whether you are using our Smart Cloths on your screens or our audio gear on your commute, we would love to know how it feels.
+              <p style="margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 14px; line-height: 23px; color: #555555; max-width: 480px;">
+                You have had some time to put your Schatzii essentials to work. Whether you are using our Smart Cloths on your screens or our tech accessories on your commute, we would love to know how it feels.
               </p>
             </td>
           </tr>
@@ -108,24 +106,24 @@
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                       <tr>
                         <td style="padding: 0 6px;">
-                          <a href="https://schatzii.com/pages/reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
+                          <a href="{{ event.extra.line_items.0.product.url|default:'https://schatzii.com/pages/reviews' }}?rating=1#reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
                         </td>
                         <td style="padding: 0 6px;">
-                          <a href="https://schatzii.com/pages/reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
+                          <a href="{{ event.extra.line_items.0.product.url|default:'https://schatzii.com/pages/reviews' }}?rating=2#reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
                         </td>
                         <td style="padding: 0 6px;">
-                          <a href="https://schatzii.com/pages/reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
+                          <a href="{{ event.extra.line_items.0.product.url|default:'https://schatzii.com/pages/reviews' }}?rating=3#reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
                         </td>
                         <td style="padding: 0 6px;">
-                          <a href="https://schatzii.com/pages/reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
+                          <a href="{{ event.extra.line_items.0.product.url|default:'https://schatzii.com/pages/reviews' }}?rating=4#reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
                         </td>
                         <td style="padding: 0 6px;">
-                          <a href="https://schatzii.com/pages/reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
+                          <a href="{{ event.extra.line_items.0.product.url|default:'https://schatzii.com/pages/reviews' }}?rating=5#reviews" target="_blank" style="font-size: 32px; color: #111111; text-decoration: none;">&#9733;</a>
                         </td>
                       </tr>
                     </table>
                     <p style="margin: 12px 0 0 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 12px; color: #777777;">
-                      Click a star to share your thoughts in 60 seconds
+                      Click a star to share your thoughts.
                     </p>
                   </td>
                 </tr>
@@ -138,13 +136,13 @@
             <td align="center" class="mobile-pad" style="padding: 0 35px 32px 35px;">
               <div>
                 <!--[if mso]>
-                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://schatzii.com/pages/reviews" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="4%" stroke="f" fillcolor="#111111">
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ event.extra.line_items.0.product.url|default:'https://schatzii.com/pages/reviews' }}#reviews" style="height:48px;v-text-anchor:middle;width:240px;" arcsize="4%" stroke="f" fillcolor="#111111">
                   <w:anchorlock/>
                   <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;">LEAVE A REVIEW &rarr;</center>
                 </v:roundrect>
                 <![endif]-->
                 <!--[if !mso]><!-->
-                <a href="https://schatzii.com/pages/reviews" target="_blank" style="display: inline-block; background-color: #111111; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 16px 36px; border-radius: 2px; text-decoration: none;">
+                <a href="{{ event.extra.line_items.0.product.url|default:'https://schatzii.com/pages/reviews' }}#reviews" target="_blank" style="display: inline-block; background-color: #111111; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 16px 36px; border-radius: 2px; text-decoration: none;">
                   LEAVE A REVIEW &rarr;
                 </a>
                 <!--<![endif]-->
@@ -182,6 +180,5 @@
       </td>
     </tr>
   </table>
-
 </body>
 </html>
